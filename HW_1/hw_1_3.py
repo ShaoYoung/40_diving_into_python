@@ -13,7 +13,8 @@ NUM_OF_ATTEMPTS = 10
 number = randint(LOWER_LIMIT, UPPER_LIMIT)
 
 attempt = 0
-print(f'Программа загадывает число от {LOWER_LIMIT} до {UPPER_LIMIT}. Необходимо угадать число за {NUM_OF_ATTEMPTS} попыток.')
+print(
+    f'Программа загадывает число от {LOWER_LIMIT} до {UPPER_LIMIT}. Необходимо угадать число за {NUM_OF_ATTEMPTS} попыток.')
 while attempt < NUM_OF_ATTEMPTS:
     attempt += 1
     user_number = int(input(f'Попытка номер {attempt}. Введите число: '))

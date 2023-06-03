@@ -15,7 +15,6 @@ while count <= N:
     # elif count % 2 == 0:
     # заменил на условие через and и E != 0, т.к. надо исключить кратные E
     if count % 2 == 0 and count % E != 0:
-
         elem_sum += count
         print(count, end=' ')
 print()
