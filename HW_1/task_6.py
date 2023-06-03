@@ -7,13 +7,13 @@
 
 year = int(input('Введите год: '))
 
-if year % 400 == 0:
-    check = 'високосный'
-elif year % 100 == 0:
-    check = 'не високосный'
-elif year % 4 == 0:
-    check = 'високосный'
-else:
-    check = 'не високосный'
+ULIAN = 4
+GRIG_1 = 400
+GRIG_2 = 100
 
-print(f'Год {year} {check}')
+check = 'не '
+# условие проверки в один if
+if year % GRIG_1 == 0 or year % GRIG_2 != 0 and year % ULIAN == 0:
+    check = ''
+
+print(f'Год {year} {check}високосный')

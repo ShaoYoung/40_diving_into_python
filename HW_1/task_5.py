@@ -10,9 +10,12 @@ elem_sum = 0
 E = 4
 while count <= N:
     count += 1
-    if count % E == 0:
-        continue
-    elif count % 2 == 0:
+    # if count % E == 0:
+    #     continue
+    # elif count % 2 == 0:
+    # заменил на условие через and и E != 0, т.к. надо исключить кратные E
+    if count % 2 == 0 and count % E != 0:
+
         elem_sum += count
         print(count, end=' ')
 print()

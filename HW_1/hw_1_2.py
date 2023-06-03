@@ -8,10 +8,11 @@ MIN_VALUE = 0
 MAX_VALUE = 100000
 while True:
     number = int(input(f'Введите число от {MIN_VALUE} до {MAX_VALUE}: '))
-    if number >= MIN_VALUE and number <= MAX_VALUE:
+    # сделано проще
+    if MIN_VALUE <= number <= MAX_VALUE:
         break
-    else:
-        print('Не корректный ввод. Попробуйте ещё раз')
+    # сделано без else
+    print('Не корректный ввод. Попробуйте ещё раз')
 if number == 0 or number == 1:
     print(f'Число {number} не является ни простым, ни составным')
 elif number % 2 == 0 and number != 2:
@@ -21,4 +22,6 @@ else:
     for i in range(3, number // 2 + 1, 2):
         if number % i == 0:
             check_number = f'Число {number} составное'
+            # добавлен break для исключения проверки остальных делителей. число уже составное.
+            break
     print(check_number)
