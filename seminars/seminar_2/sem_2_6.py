@@ -12,7 +12,7 @@
 
 START_SUM = 0
 
-
+# Проверка на третью операцию
 def third_operation(count):
     count += 1
     if count < 3:
@@ -22,8 +22,8 @@ def third_operation(count):
         koeff = 1.03
     return count, koeff
 
-
-def add_money(account, count):
+# Пополнение счёта
+def refill(account, count):
     money = input('Введите сумму пополнения, кратную 50 у.е.: ')
     money = int(money) if money.isdigit() else -1
     if money % 50 == 0:
@@ -34,7 +34,7 @@ def add_money(account, count):
     print(f'На вашем счете {round(account, 2)} у.е.')
     return account, count
 
-
+# Снятие денег
 def withdraw_money(account, count):
     money = input('Введите сумму снятия, кратную 50 у.е.: ')
     money = int(money) if money.isdigit() else -1
@@ -62,7 +62,7 @@ while True:
     account = account * 0.9 if account > 5_000_000 else account
     match choice:
         case '1':
-            account, count = add_money(account, count)
+            account, count = refill(account, count)
         case '2':
             account, count = withdraw_money(account, count)
         case '3':
