@@ -3,7 +3,7 @@
 
 SYSTEM_16 = 16
 
-
+# Преобразование. В виде функции (на будущее).
 def convert(number: int, system: int) -> str:
     sign = ''
     # проверка на отрицательное число
@@ -13,6 +13,7 @@ def convert(number: int, system: int) -> str:
         sign = '-'
         number = abs(number)
     # символы шестнадцатеричной системы счисления, которых нет в десятичной системе
+    # для минимизации размеров словаря цифры от 0 до 9 не заносим
     hex_notation = {
         10: 'A',
         11: 'B',
@@ -23,7 +24,7 @@ def convert(number: int, system: int) -> str:
     }
     # список строк
     temp = list()
-    while number > 0:
+    while number:
         remainder = number % system
         if remainder in hex_notation:
             remainder = hex_notation[remainder]
