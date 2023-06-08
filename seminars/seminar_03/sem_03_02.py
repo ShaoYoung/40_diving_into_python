@@ -15,7 +15,10 @@ elif ',' in user_str or '.' in user_str:
         if ',' in user_str:
             user_str.replace(',', '.')
         tmp = user_str
-        tmp.replace('.', '')    # нет замены !!!
+
+        # TODO НЕТ ЗАМЕНЫ !!!
+
+        tmp.replace('.', '')
         if tmp.startswith('-'):
             tmp.replace('-', '')
         if tmp.isdigit():
