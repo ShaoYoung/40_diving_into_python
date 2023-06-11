@@ -17,3 +17,6 @@ long = long + COUNT_SPACE
 for i, item in enumerate(list_str, 1):
     print(f'{i}:{item:>{long}} ')
 
+# Это можно не делать. Просто добавьте пробел явно в 18 строке
+# print(f'{i}: {item:>{long}} ')
+
