@@ -10,7 +10,13 @@ def calc_profit(companies: dict) -> bool:
     :param companies: dict(name of company: [financial result)]
     :return: bool (True - все компании прибыльные или сработали в ноль, False - хотя бы одна убыточная)
     '''
-    return all([sum(value) >= 0 for value in companies.values()])
+    # return all([sum(value) >= 0 for value in companies.values()])
+    # Отличное решение, но list comprehention не нужен. Достаточно простого генератора
+    # return all(sum(value) >= 0 for value in companies.values())
+    # а еще тут отлично подойдет функция map. Попробуйте
+    # TODO спросить на семинаре 15.06.2023
+    return all(sum(value) >= 0 for value in companies.values())
+
 
 
 companies = {
