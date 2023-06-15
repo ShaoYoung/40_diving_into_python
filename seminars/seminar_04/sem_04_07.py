@@ -4,9 +4,25 @@
 # ✔ Вычислите итоговую прибыль или убыток каждой компании. Если все компании
 # прибыльные, верните истину, а если хотя бы одна убыточная — ложь.
 
-# TODO использовать all()
+def calc_profit(companies: dict) -> bool:
+    '''
+    Определение прибыльности/убыточности компаний.
+    :param companies: dict(name of company: [financial result)]
+    :return: bool (True - все компании прибыльные или сработали в ноль, False - хотя бы одна убыточная)
+    '''
+    # return all([sum(value) >= 0 for value in companies.values()])
+    # Отличное решение, но list comprehention не нужен. Достаточно простого генератора
+    # return all(sum(value) >= 0 for value in companies.values())
+    # а еще тут отлично подойдет функция map. Попробуйте
+    # TODO спросить на семинаре 15.06.2023
+    return all(sum(value) >= 0 for value in companies.values())
 
 
 
+companies = {
+    'Рога и копыта': [100_000, -300_000, 50, 100_000, 150_000],
+    'Газпром': [1_200_000, 3_300_000, -880_000, -100_000, -4_050_000],
+    'Сбербанк': [2_100_000, 300_000, 2_000_000, -3_100_000, 550_000],
+}
 
-
+print(calc_profit(companies))
