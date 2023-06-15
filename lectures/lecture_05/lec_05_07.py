@@ -8,8 +8,8 @@ def factorial(n):
         yield number
 
 
-for i, num in enumerate(factorial(10), start=1):
-    print(f'{i}! = {num}')
+# for i, num in enumerate(factorial(10), start=1):
+#     print(f'{i}! = {num}')
 
 my_iter = iter(factorial(4))
 print(my_iter)
