@@ -8,11 +8,18 @@ def path_name_extension(absolute_path: str) -> tuple:
     :param absolute_path: str
     :return: tuple
     '''
-    *path, file_with_ext = absolute_path.split('/')
-    path = '/'.join(path)
+    # *path, file_with_ext = absolute_path.split('\\')
+
+    # rsplit - разбивает строку по символу/подстроке, начиная справа, второй параметр - сколько раз делить строку.
+    *path, file_with_ext = absolute_path.rsplit('\\', 1)
+
+    print(path)
+    # path = '\\'.join(path)
     name, extension = file_with_ext.split('.')
-    return path, name, extension
+
+    return *path, name, extension
 
 
-my_string = 'C:/Users/Nikita/Desktop/Python_Manual/Самоучитель_Python.pdf'
+my_string = 'C:\\Users\\Nikita\\Desktop\\Python_Manual\\Самоучитель_Python.pdf'
+print(my_string)
 print(path_name_extension(my_string))

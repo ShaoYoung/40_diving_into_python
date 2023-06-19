@@ -9,8 +9,7 @@ def fibonacci(quantity: int) -> iter:
     :param quantity: int
     :return: iter
     '''
-    a = 0
-    b = 1
+    a, b = 0, 1
     if quantity:
         yield a
     if quantity > 1:
