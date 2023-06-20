@@ -18,4 +18,3 @@ if __name__ == '__main__':
     variants = ['ель', 'ёлка', 'елка']
     attempts = 4
     print(enigma(question, variants, attempts))
-

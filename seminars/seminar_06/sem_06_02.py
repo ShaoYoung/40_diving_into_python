@@ -35,4 +35,3 @@ __all__ = ['game']
 
 if __name__ == '__main__':
     print(game(LOWER_LIMIT, UPPER_LIMIT, NUM_OF_ATTEMPTS))
-
