@@ -31,3 +31,4 @@ _res_dict = {}
 if __name__ == '__main__':
     game()
     print_res(_res_dict)
+

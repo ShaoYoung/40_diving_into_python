@@ -36,3 +36,4 @@ if __name__ == '__main__':
     print(game(*map(int, params)))
 
 # python sem_06_03.py 0 10 3
+
