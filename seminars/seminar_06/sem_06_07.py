@@ -5,8 +5,8 @@
 # Весь период (1 января 1 года - 31 декабря 9999 года) действует Григорианский календарь.
 # Проверку года на високосность вынести в отдельную защищённую функцию.
 
-import datetime
-
+# import datetime
+from sys import argv
 
 def _leap(year):
     ULIAN = 4
@@ -15,7 +15,7 @@ def _leap(year):
     return year % GRIG_1 == 0 or year % GRIG_2 != 0 and year % ULIAN == 0
 
 
-def check_data(date):
+def check_date(date):
     m_30 = [4, 6, 9, 11]
     m_31 = [1, 3, 5, 7, 8, 10, 12]
     day, month, year = map(int, date.split('.'))
@@ -26,9 +26,26 @@ def check_data(date):
     return False
 
 
-__all__ = ['check_data']
+# В модуль с проверкой даты добавьте возможность запуска в терминале с передачей даты на проверку.
+__all__ = ['check_date']
 
 if __name__ == '__main__':
-    print(check_data('20.06.2023'))
+
+    # Вывод в терминал
+    print(check_date(argv[1]))
+
+    # print(check_date('31.06.2023'))
+
     # вариант через datetime и обработку исключения:
     # print(datetime.datetime.strptime('31.06.2023', "%d.%m.%Y"))
+
+# вызов из терминала
+# python sem_06_07.py 20.06.2023
+
+# Описание:
+# Функция sys.argv модуля sys возвращает список параметров командной строки, передаваемых скрипту Python.
+#
+# Выражение argv[0] - это имя скрипта и зависит от операционной системы, является ли это полный путь или нет.
+
+
+
