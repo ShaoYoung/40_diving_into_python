@@ -21,7 +21,7 @@ def queen_cuts(queens_coord: list | tuple | set) -> bool:
     :return: bool
     '''
     # print(queens_coord)
-    for i in range(0, len(queens_coord)):
+    for i in range(len(queens_coord)):
         for j in range(i + 1, len(queens_coord)):
             # print(queens_coord[i], queens_coord[j])
             if queens_coord[i][0] == queens_coord[j][0] or queens_coord[i][1] == queens_coord[j][1] or abs(
@@ -40,7 +40,7 @@ def get_random_desk_combination(length_of_desk: int) -> list:
     while len(random_desk_combination) <= length_of_desk:
         coord_a, coord_b = randint(1, length_of_desk), randint(1, length_of_desk)
         random_desk_combination.add((coord_a, coord_b))
-    return list(random_desk_combination)
+    return [*random_desk_combination]
 
 
 def get_num_combinations(num_of_comb: int, length_of_desk) -> set:
