@@ -13,8 +13,20 @@ from random import choice, choices, randint
 
 LETTERS = 'qwertyuiopasdfghjklzxcvbnm'
 
+__all__ = ['make_files']
+
 
 def make_files(ext, min_length=6, max_length=30, min_byte=256, max_byte=4096, count_files=42):
+    '''
+    Генератор файлов
+    :param ext:
+    :param min_length:
+    :param max_length:
+    :param min_byte:
+    :param max_byte:
+    :param count_files:
+    :return:
+    '''
     for _ in range(count_files):
         # собираем имя файла. choices - случайный выбор k элементов из итерируемого объекта
         filename = '7_4/' + ''.join(choices(LETTERS, k=randint(min_length, max_length))) + '.' + ext

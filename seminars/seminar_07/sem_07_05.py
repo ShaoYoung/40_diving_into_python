@@ -7,3 +7,28 @@
 # ✔ Внутри используйте вызов функции из прошлой задачи.
 
 
+from sem_07_04 import make_files
+
+__all__ = ['make_dif_ext_files']
+
+
+def make_dif_ext_files(dict_ext):
+    '''
+    Генератор файлов с разными расширениями
+    :param dict_ext: словарь, где ключ - расширение, значение - количество файлов для генерации
+    :return:
+    '''
+    for ext, count in dict_ext.items():
+        make_files(ext=ext, min_length=3, max_length=8, min_byte=10, max_byte=50, count_files=count)
+
+
+if __name__ == '__main__':
+    # словарь расширений и количества файлов
+    dict_ext = {
+        'txt': 4,
+        'jpg': 5,
+        'bmp': 2,
+        'mp3': 1,
+        'html': 3,
+    }
+    make_dif_ext_files(dict_ext)

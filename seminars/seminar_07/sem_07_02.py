@@ -10,6 +10,8 @@ CONSONANT = 'qwertyuiopasdfghjklzxcvbnm'
 MIN_LENGTH = 4
 MAX_LENGTH = 7
 
+__all__ = ['task_2']
+
 
 def task_2(count_names, filename):
     names = []
