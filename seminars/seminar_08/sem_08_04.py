@@ -10,6 +10,7 @@
 import csv
 import json
 
+__all__ = ['csv_json']
 
 def csv_json(csv_file, json_file):
     with(open(json_file, "w", encoding="utf-8") as json_f,
@@ -28,7 +29,7 @@ def csv_json(csv_file, json_file):
             hash_name = hash(id + name)
             print(f'{hash_name = }')
             # json_dict.update({f'{i} строка': {'level': level, 'id': id, 'name': name, 'hash_name': hash_name}})
-            json_list.append({f'{i} строка': {'level': level, 'id': id, 'name': name, 'hash_name': hash_name}})
+            json_list.append({'level': level, 'id': id, 'name': name, 'hash_name': hash_name})
             # print(f'{json_dict = }')
             print(f'{json_list = }')
         # ensure_ascii=False - вывод символов как они есть (не в кодировке ASCII)
@@ -38,5 +39,5 @@ def csv_json(csv_file, json_file):
 
 if __name__ == '__main__':
     csvfile = 'person.csv'
-    jsonfile = 'person_new.json'
+    jsonfile = 'person_list.json'
     csv_json(csvfile, jsonfile)

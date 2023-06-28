@@ -9,6 +9,7 @@
 import json
 import os
 
+__all__ = ['code']
 
 def code(filename):
     # если файл существует, открываем и записываем содержимое в словарь
