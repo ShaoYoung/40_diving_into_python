@@ -5,6 +5,7 @@
 import csv
 import json
 
+__all__ = ['json_csv']
 
 def json_csv(jsonfile):
     csvfile = 'person.csv'

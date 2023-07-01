@@ -8,6 +8,7 @@
 
 import json
 
+__all__ = ['write_json']
 
 def write_json(filename):
     with (open(filename, "r", encoding="utf-8") as res,

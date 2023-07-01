@@ -6,6 +6,7 @@ import pickle
 import json
 import os
 
+__all__ = ['json_pickle']
 
 def json_pickle(folder):
     if os.path.exists(folder):
