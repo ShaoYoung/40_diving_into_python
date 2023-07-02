@@ -82,10 +82,10 @@ def save_to_json(func):
 def find_roots(a=0, b=0, c=1):
     d = b ** 2 - 4 * a * c
     # print(f'Дискриминант = {d}')
-    x_1 = (-b + pow(d, 0.5)) / (2 * a)
-    x_2 = (-b - pow(d, 0.5)) / (2 * a)
+    x_1 = (-b + d ** 0.5) / (2 * a)
+    x_2 = (-b - d ** 0.5) / (2 * a)
     # print(f'Корни квадратного уравнения {x_1}, {x_2}')
-    return (x_1, x_2)
+    return x_1, x_2
 
 
 if __name__ == '__main__':
