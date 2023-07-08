@@ -16,10 +16,10 @@ class Archive:
         self.list_string.append(string)
 
     def __str__(self):
-        return f'Экземпляр класса {Archive.__name__}. Значения "{self.number} {self.list_number}"'
+        return f'Экземпляр класса {Archive.__name__}. Значения {self.number = }, {self.string = }'
 
     def __repr__(self):
-        return f'Archive({self.number}, {self.string})'
+        return f'Archive({self.number}, "{self.string}")'
 
 
 if __name__ == '__main__':
