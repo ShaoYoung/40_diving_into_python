@@ -14,6 +14,12 @@ class MyString(str):
         instance.creation_time = time.asctime()
         return instance
 
+    def __str__(self):
+        return f'Экземпляр класса MyString. Значения {self.author = }, {self.creation_time = }'
+
+    def __repr__(self):
+        return f'MyString("String value", "{self.author}")'
+
 
 if __name__ == '__main__':
     author = 'Student'
@@ -22,6 +28,7 @@ if __name__ == '__main__':
     print(f'{str_1 = }')
     print(f'{str_1.author = }')
     print(f'{str_1.creation_time = }')
-    print(help(MyString))
-
+    # print(help(MyString))
+    print(f'{str_1.__str__() = }')
+    print(f'{str_1.__repr__() = }')
 

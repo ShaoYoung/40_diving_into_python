@@ -8,7 +8,7 @@ from sem_11_05 import Rectangle
 
 class SuperRectangle(Rectangle):
     '''
-    Класс SuperRectangle с возможностью сравнения по площади
+    Класс SuperRectangle с возможностью сравнения прямоугольников по площадям
     '''
     def __init__(self, *args):
         super().__init__(*args)
@@ -34,7 +34,11 @@ class SuperRectangle(Rectangle):
         return other.get_square() <= self.get_square()
 
     def __str__(self):
-        return 'Класс SuperRectangle с возможностью сравнения по площади'
+        return 'Класс SuperRectangle с возможностью сравнения прямоугольников по площадям'
+
+    def __repr__(self):
+        return f'SuperRectangle({self.length}, {self.width})'
+
 
 
 if __name__ == '__main__':
@@ -49,3 +53,4 @@ if __name__ == '__main__':
     print(f'{rec_1 < rec_2 = }')
     print(f'{rec_1 >= rec_2 = }')
     print(rec_1)
+    print(f'{rec_1 = }')
