@@ -1,4 +1,4 @@
-# Прямоугольник.
+# Прямоугольник
 
 from hw_13_01 import IncorrectSideException
 
