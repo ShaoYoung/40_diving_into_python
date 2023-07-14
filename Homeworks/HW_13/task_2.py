@@ -1,4 +1,4 @@
-# Сортировка файлов в указанной директории.
+# Сортировка файлов в указанной директории
 
 import os
 from hw_13_01 import EmptyDictionaryException, EmptyFolderException

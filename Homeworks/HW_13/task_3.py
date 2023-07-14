@@ -1,4 +1,4 @@
-# Проверка на существование даты.
+# Проверка на существование даты
 
 from hw_13_01 import IncorrectValueException
 
