@@ -8,26 +8,41 @@ from rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
-    def test_1(self):
-        self.assertIsInstance(Rectangle(5), Rectangle)
+    def setUp(self) -> None:
+        self.rec_1 = Rectangle(5)
+        self.rec_2 = Rectangle(6)
+        self.rec_3 = self.rec_1 + self.rec_2
+        self.rec_4 = self.rec_1 - self.rec_2
 
-    def test_2(self):
-        pass
+    # проверка типа при создании экземпляра класса
+    def test_create(self):
+        self.assertIsInstance(self.rec_1, Rectangle)
 
-    def test_3(self):
-        pass
+    # проверка периметра
+    def test_perimeter(self):
+        self.assertEqual(self.rec_1.get_perimeter(), 20)
 
-    def test_4(self):
-        pass
+    # проверка площади
+    def test_area(self):
+        self.assertEqual(self.rec_1.get_square(), 25)
 
-    def test_5(self):
-        pass
+    # проверка не равенства прямоугольников
+    def test_not_equal(self):
+        self.assertFalse(self.rec_1 == self.rec_2)
 
-    def test_6(self):
-        pass
+    # проверка корректности передачи аргумента при создании экземпляра
+    def test_type_argument(self):
+        with self.assertRaises(TypeError):
+            Rectangle('5') + Rectangle('6')
 
-    def test_7(self):
-        pass
+    def test_add(self):
+        self.assertTrue(self.rec_1 + self.rec_2 == self.rec_3 )
+
+    def test_add_2(self):
+        self.assertEqual(self.rec_1 + self.rec_2, self.rec_3)
+
+    def test_sub(self):
+        self.assertTrue(self.rec_1 - self.rec_2 == self.rec_4 )
 
 
 if __name__ == '__main__':

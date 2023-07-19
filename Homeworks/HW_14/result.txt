@@ -1,0 +1,9 @@
+root 1
+ivan 4
+petr 9
+maria 16
+elena 25
+john 36
+mary 49
+ibrahim 64
+zuhra 81

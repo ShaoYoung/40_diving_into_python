@@ -40,6 +40,9 @@ class Rectangle:
         size = sub_perimeters / 4
         return Rectangle(size)
 
+    def __eq__(self, other):
+        return self.get_perimeter() == other.get_perimeter() and self.get_square() == other.get_square()
+
     def __str__(self):
         return 'Класс Rectangle. Периметр, площадь, сложение и вычитание прямоугольников.'
 
@@ -56,3 +59,8 @@ if __name__ == '__main__':
     print(sub_rec.length, sub_rec.width)
     print(rec_1)
     print(f'{rec_1 = }')
+
+    rec = Rectangle(5)
+    # rec_3 = Rectangle('q')
+    # sum_rec = rec_3 + rec_3
+    print(Rectangle(5) == Rectangle(5))

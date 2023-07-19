@@ -19,11 +19,11 @@ def test_2():
 
 
 def test_3():
-    assert clean_text('python, but not java') == 'python but not java', 'Something is not OK'
+    assert clean_text(': python, but not java!!!: ') == ' python but not java ', 'Something is not OK'
 
 
 def test_4():
-    assert clean_text('python - это не питон') == 'python    ', 'Something is not OK'
+    assert clean_text('python не питон') == 'python  ', 'Something is not OK'
 
 
 def test_5():
